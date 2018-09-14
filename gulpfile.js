@@ -4,8 +4,8 @@ var gulp           = require('gulp'),
 		browserSync    = require('browser-sync'),
 		concat         = require('gulp-concat'),
 		uglify         = require('gulp-uglify'),
-		cleanCSS       = require('gulp-clean-css'),
-		rename         = require('gulp-rename'),
+		// cleanCSS       = require('gulp-clean-css'),
+		// rename         = require('gulp-rename'),
 		del            = require('del'),
 		imagemin       = require('gulp-imagemin'),
 		cache          = require('gulp-cache'),
@@ -26,14 +26,14 @@ gulp.task('common-js', function() {
 
 gulp.task('scripts', ['common-js'], function() {
 	return gulp.src([
-		// 'app/libs/jquery-3.3.1/jquery-3.3.1.min.js',
+		'app/libs/jquery-3.3.1/jquery-3.3.1.min.js',
 		// //datepicker scripts
 		// 'app/libs/air-datepicker/dist/js/datepicker.min.js',
 		// 'app/libs/datepicker/datepicker.en.js',
 		// //datepicker end
 		// 'app/libs/slick-1.8.1/slick/slick.min.js',
 		// 'app/libs/magnific-popup/jquery.magnific-popup.min.js',
-		// 'app/js/common.min.js', // Всегда в конце
+		'app/js/common.min.js', // Всегда в конце
 		])
 	.pipe(concat('scripts.min.js'))
 	// .pipe(uglify()) // Минимизировать весь js (на выбор)
@@ -43,18 +43,18 @@ gulp.task('scripts', ['common-js'], function() {
 
 var notify = require( 'gulp-notify' );
 
-gulp.task( 'sass', function()
-{
-  gulp.src( 'sass/styles.scss' )
-    .pipe( sass().on( 'error', notify.onError(
-      {
-        message: "<%= error.message %>",
-        title  : "Sass Error!"
-      } ) )
-  )
-    .pipe( gulp.dest( 'css/' ) )
-    .pipe( notify( 'SASS - хорошая работа!' ) );
-} );
+// gulp.task( 'sass', function()
+// {
+//   gulp.src( 'sass/styles.scss' )
+//     .pipe( sass().on( 'error', notify.onError(
+//       {
+//         message: "<%= error.message %>",
+//         title  : "Sass Error!"
+//       } ) )
+//   )
+//     .pipe( gulp.dest( 'css/' ) )
+//     .pipe( notify( 'SASS - хорошая работа!' ) );
+// } );
 
 
 gulp.task('browser-sync', function() {
@@ -71,9 +71,9 @@ gulp.task('browser-sync', function() {
 gulp.task('sass', function() {
 	return gulp.src('app/sass/**/*.sass')
 	.pipe(sass().on("error", notify.onError()))
-	.pipe(rename({suffix: '.min', prefix : ''}))
+	// .pipe(rename({suffix: '.min', prefix : ''}))
 	.pipe(autoprefixer(['last 15 versions']))
-	.pipe(cleanCSS())
+	// .pipe(cleanCSS())
 	.pipe(gulp.dest('app/css'))
 	.pipe(browserSync.reload({stream: true}));
 });
@@ -98,7 +98,7 @@ gulp.task('build', ['removedist', 'imagemin', 'sass', 'scripts'], function() {
 		]).pipe(gulp.dest('dist'));
 
 	var buildCss = gulp.src([
-		'app/css/main.min.css',
+		'app/css/main.css',
 		]).pipe(gulp.dest('dist/css'));
 
 	var buildJs = gulp.src([
