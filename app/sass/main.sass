@@ -49,9 +49,10 @@ body
 	overflow-x: hidden
 	background-color: #fff
 	position: relative
-	color: $text
+	color: #000
 	font-family: $default-font
 	overflow-x: hidden
+	margin: 0
 	a
 		text-decoration: none
 		&:hover
@@ -65,9 +66,127 @@ body
 .header-main
 	height: 100vh
 	min-height: 93rem
+	width: 100%
 	background-color: $background
 	background-size: cover
 	background-repeat: no-repeat
 	display: flex
 	flex-direction: column
 	justify-content: flex-start
+	overflow-x: hidden
+	.header-row
+		height: inherit
+
+.left-img
+	background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(#C9EEF6,1)),url(../img/portrait.jpg)
+	width: 100%
+
+
+.header-main_content
+	padding: 3rem 3rem 0 0
+	h1
+		font-family: "merriweather-black"
+		font-size: 4rem
+		text-transform: uppercase
+		color: $big-text
+		line-height: 6.8rem
+		.and
+			font-size: 3.2rem
+			font-family: inherit
+		.result
+			font-family: $description-font
+			font-size: 2.4rem
+			text-transform: lowercase
+	.main-features
+		font-family: $items-font
+		font-size: 2.8rem
+		color: #fff
+		.one-feature
+			background-color: $accent
+			border-radius: $radius
+			line-height: 5rem
+			padding: 1.2rem 2.2rem
+
+.top-head
+	display: flex
+	justify-content: space-between
+	.main-logo
+		width: 30%
+		height: auto
+		img
+			width: 100%
+			height: auto
+
+.right-info
+	width: 55%
+	display: flex
+	justify-content: space-between
+	align-items: center
+	padding-right: 2rem
+	.lang
+		font-size: 2.4rem
+		color: $accent
+		line-height: 2.4rem
+		.onelang
+			cursor: pointer
+		.onelang.active
+			color: #fff
+			border-radius: $radius
+			background-color: $accent
+			padding: 0 1rem
+			cursor:
+	.top-phones
+		display: flex
+		flex-direction: column
+		font-size: 1.8rem
+		a
+			color: $accent
+
+.btn-blue
+	font-family: $button-font
+	color: #fff
+	font-size: 2.4rem
+	background-color: $accent
+	padding: 1.2rem 2.2rem
+	border-radius: $radius
+	line-height: 2.4rem
+	cursor: pointer
+	box-shadow: none
+	&:hover
+		background-color: #fff
+		color: $accent
+
+.img-matchmaking
+	max-width: 30rem
+	height: 30rem
+	position: relative
+	img
+		position: absolute
+		width: 100%
+		height: auto
+
+.head-signature
+	display: flex
+	flex-direction: row
+	justify-content: space-between
+	p
+		font-family: $description-font
+		font-size: 1.8rem
+		line-height: 2.2rem
+
+.red-btn
+	font-family: $button-font
+	color: #fff
+	font-size: 2.4rem
+	background-color: $main-button
+	padding: 1.2rem 2.2rem
+	border-radius: $radius
+	line-height: 2.4rem
+	cursor: pointer
+	box-shadow: none
+	&:hover
+		background-color: #fff
+		color: $main-button
+
+
+

@@ -68,14 +68,21 @@ gulp.task('browser-sync', function() {
 	});
 });
 
-gulp.task('sass', function() {
-	return gulp.src('app/sass/**/*.sass')
-	.pipe(sass().on("error", notify.onError()))
-	// .pipe(rename({suffix: '.min', prefix : ''}))
-	.pipe(autoprefixer(['last 15 versions']))
-	// .pipe(cleanCSS())
-	.pipe(gulp.dest('app/css'))
-	.pipe(browserSync.reload({stream: true}));
+// gulp.task('sass', function() {
+// 	return gulp.src('app/sass/**/*.sass')
+// 	.pipe(sass().on("error", notify.onError()))
+// 	// .pipe(rename({suffix: '.min', prefix : ''}))
+// 	.pipe(autoprefixer(['last 15 versions']))
+// 	// .pipe(cleanCSS())
+// 	.pipe(gulp.dest('app/css'))
+// 	.pipe(browserSync.reload({stream: true}));
+// });
+gulp.task('sass', function(){ // Создаем таск Sass
+    return gulp.src('app/sass/**/*.sass') // Берем источник
+        .pipe(sass()) // Преобразуем Sass в CSS посредством gulp-sass
+        .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true })) // Создаем префиксы
+        .pipe(gulp.dest('app/css')) // Выгружаем результата в папку app/css
+        .pipe(browserSync.reload({stream: true})) // Обновляем CSS на странице при изменении
 });
 
 gulp.task('watch', ['sass', 'scripts', 'browser-sync'], function() {
