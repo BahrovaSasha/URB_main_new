@@ -8,6 +8,8 @@
 	-webkit-box-sizing: border-box
 	-moz-box-sizing: border-box
 	box-sizing: border-box
+	outline: 0 !important
+	box-shadow: none
 	&:before, &:after
 		-webkit-box-sizing: border-box
 		-moz-box-sizing: border-box
@@ -65,7 +67,7 @@ body
 
 .header-main
 	height: 100vh
-	min-height: 93rem
+	min-height: 80rem
 	width: 100%
 	background-color: $background
 	background-size: cover
@@ -81,11 +83,13 @@ body
 	height: 100vh
 	width: auto
 	position: relative
-	img
-		position: absolute
+	background-size: contain
+	background: linear-gradient(to right, rgba(0, 0, 0, 0) 70%, rgba(#C9EEF6, 1)), url(../img/portrait.jpg) no-repeat 70% 80%, -10% 40%
 
-	//background-size: cover
-	//background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(#C9EEF6, 1)), url(../img/portrait.jpg) no-repeat 0 0, 50% 30%
+	//img
+	//	position: absolute
+
+
 
 .header-main_content
 	padding: 3rem 3rem 0 0
@@ -95,6 +99,7 @@ body
 		text-transform: uppercase
 		color: $big-text
 		line-height: 6.8rem
+		letter-spacing: 0.2rem
 		.and
 			font-size: 3.2rem
 			font-family: inherit
@@ -102,14 +107,16 @@ body
 			font-family: $description-font
 			font-size: 2.4rem
 			text-transform: lowercase
+			letter-spacing: normal
 	.main-features
 		font-family: $items-font
-		font-size: 2.8rem
+		font-size: 2.4rem
 		color: #fff
+		padding-right: 8rem
 		.one-feature
 			background-color: $accent
 			border-radius: $radius
-			line-height: 5rem
+			line-height: 3.6rem
 			padding: 1.2rem 2.2rem
 
 .top-head
@@ -123,7 +130,7 @@ body
 			height: auto
 
 .right-info
-	width: 55%
+	width: 65%
 	display: flex
 	justify-content: space-between
 	align-items: center
@@ -131,7 +138,7 @@ body
 	.lang
 		font-size: 2.4rem
 		color: $accent
-		line-height: 2.4rem
+		line-height: 2rem
 		.onelang
 			cursor: pointer
 		.onelang.active
@@ -139,11 +146,12 @@ body
 			border-radius: $radius
 			background-color: $accent
 			padding: 0 1rem
-			cursor:
+			cursor: auto
 	.top-phones
 		display: flex
 		flex-direction: column
 		font-size: 1.8rem
+		line-height: normal
 		a
 			color: $accent
 
@@ -152,27 +160,27 @@ body
 	color: #fff
 	font-size: 2.4rem
 	background-color: $accent
-	padding: 1.2rem 2.2rem
+	padding: 1rem 1.8rem
 	border-radius: $radius
 	line-height: 2.4rem
 	cursor: pointer
 	box-shadow: none
-	&:hover
+	&:focus
 		background-color: #fff
 		color: $accent
 
 .img-matchmaking
 	max-width: 30rem
-	height: 30rem
-	position: relative
+	height: auto
 	img
-		position: absolute
 		width: 100%
 		height: auto
 
 .head-signature
 	display: flex
 	flex-direction: row
+	align-items: center
+	width: 100%
 	justify-content: space-between
 	p
 		font-family: $description-font
@@ -184,14 +192,63 @@ body
 	color: #fff
 	font-size: 2.4rem
 	background-color: $main-button
-	padding: 1.2rem 2.2rem
+	padding: 1rem 1.8rem
 	border-radius: $radius
 	line-height: 2.4rem
 	cursor: pointer
 	box-shadow: none
-	&:hover
+	border: none
+	&:focus
 		background-color: #fff
 		color: $main-button
+.regular-header
+	font-family: $headers-font
+	font-size: 48px
+	text-align: center
+	padding-top: 10rem
+.about
+	position: relative
+	background: #fff
+	//&:before
+	//	content: ''
+	//	display: block
+	//	position: absolute
+	//	border-radius: 100% 50%
+	//	width: 340px
+	//	height: 80px
+	//	background-color: #fff
+	//	right: -5px
+	//	top: 40px
+	//&:after
+	//	content: ''
+	//	display: block
+	//	position: absolute
+	//	border-radius: 100% 50%
+	//	width: 300px
+	//	height: 70px
+	//	background-color: #fff
+	//	left: 0
+	//	top: 27px
+	.regular-header
+		color: $accent
 
+.our-team
+	background: linear-gradient(to top, #fff, #C9EEF6 )
+	.regular-header
+		color: $big-text
+.container-smaller
+	width: 1200px
+	margin: 0 auto
+.teammate
+	text-align: center
+	font-size: 2.2rem
+	line-height: normal
+.team-avatar
+	height: 17.6rem
+	width: 17.6rem
+	border-radius: 50%
 
-
+.top-reasons
+	background-color: #fff
+	.regular-header
+		color: $main-button

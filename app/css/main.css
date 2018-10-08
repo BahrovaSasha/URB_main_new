@@ -1966,7 +1966,10 @@ html {
 
 * {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  outline: 0 !important;
+  -webkit-box-shadow: none;
+          box-shadow: none; }
   *:before, *:after {
     -webkit-box-sizing: border-box;
     box-sizing: border-box; }
@@ -2013,7 +2016,7 @@ body {
 
 .header-main {
   height: 100vh;
-  min-height: 93rem;
+  min-height: 80rem;
   width: 100%;
   background-color: #C9EEF6;
   -webkit-background-size: cover;
@@ -2039,9 +2042,13 @@ body {
 .left-img {
   height: 100vh;
   width: auto;
-  position: relative; }
-  .left-img img {
-    position: absolute; }
+  position: relative;
+  -webkit-background-size: contain;
+          background-size: contain;
+  background: -webkit-gradient(linear, left top, right top, color-stop(70%, rgba(0, 0, 0, 0)), to(#c9eef6)), url(../img/portrait.jpg) no-repeat 70% 80%, -10% 40%;
+  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 70%, #c9eef6), url(../img/portrait.jpg) no-repeat 70% 80%, -10% 40%;
+  background: -o-linear-gradient(left, rgba(0, 0, 0, 0) 70%, #c9eef6), url(../img/portrait.jpg) no-repeat 70% 80%, -10% 40%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0) 70%, #c9eef6), url(../img/portrait.jpg) no-repeat 70% 80%, -10% 40%; }
 
 .header-main_content {
   padding: 3rem 3rem 0 0; }
@@ -2050,23 +2057,26 @@ body {
     font-size: 4rem;
     text-transform: uppercase;
     color: #365257;
-    line-height: 6.8rem; }
+    line-height: 6.8rem;
+    letter-spacing: 0.2rem; }
     .header-main_content h1 .and {
       font-size: 3.2rem;
       font-family: inherit; }
     .header-main_content h1 .result {
       font-family: "opensans-lightitalic";
       font-size: 2.4rem;
-      text-transform: lowercase; }
+      text-transform: lowercase;
+      letter-spacing: normal; }
   .header-main_content .main-features {
     font-family: "opensans-semibolditalic";
-    font-size: 2.8rem;
-    color: #fff; }
+    font-size: 2.4rem;
+    color: #fff;
+    padding-right: 8rem; }
     .header-main_content .main-features .one-feature {
       background-color: #00CFEE;
       -webkit-border-radius: 22px;
               border-radius: 22px;
-      line-height: 5rem;
+      line-height: 3.6rem;
       padding: 1.2rem 2.2rem; }
 
 .top-head {
@@ -2086,7 +2096,7 @@ body {
       height: auto; }
 
 .right-info {
-  width: 55%;
+  width: 65%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2103,7 +2113,7 @@ body {
   .right-info .lang {
     font-size: 2.4rem;
     color: #00CFEE;
-    line-height: 2.4rem; }
+    line-height: 2rem; }
     .right-info .lang .onelang {
       cursor: pointer; }
     .right-info .lang .onelang.active {
@@ -2111,7 +2121,8 @@ body {
       -webkit-border-radius: 22px;
               border-radius: 22px;
       background-color: #00CFEE;
-      padding: 0 1rem; }
+      padding: 0 1rem;
+      cursor: auto; }
   .right-info .top-phones {
     display: -webkit-box;
     display: -webkit-flex;
@@ -2122,7 +2133,8 @@ body {
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
-    font-size: 1.8rem; }
+    font-size: 1.8rem;
+    line-height: normal; }
     .right-info .top-phones a {
       color: #00CFEE; }
 
@@ -2131,23 +2143,21 @@ body {
   color: #fff;
   font-size: 2.4rem;
   background-color: #00CFEE;
-  padding: 1.2rem 2.2rem;
+  padding: 1rem 1.8rem;
   -webkit-border-radius: 22px;
           border-radius: 22px;
   line-height: 2.4rem;
   cursor: pointer;
   -webkit-box-shadow: none;
           box-shadow: none; }
-  .btn-blue:hover {
+  .btn-blue:focus {
     background-color: #fff;
     color: #00CFEE; }
 
 .img-matchmaking {
   max-width: 30rem;
-  height: 30rem;
-  position: relative; }
+  height: auto; }
   .img-matchmaking img {
-    position: absolute;
     width: 100%;
     height: auto; }
 
@@ -2161,6 +2171,11 @@ body {
   -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
@@ -2175,13 +2190,54 @@ body {
   color: #fff;
   font-size: 2.4rem;
   background-color: #FF4E4E;
-  padding: 1.2rem 2.2rem;
+  padding: 1rem 1.8rem;
   -webkit-border-radius: 22px;
           border-radius: 22px;
   line-height: 2.4rem;
   cursor: pointer;
   -webkit-box-shadow: none;
-          box-shadow: none; }
-  .red-btn:hover {
+          box-shadow: none;
+  border: none; }
+  .red-btn:focus {
     background-color: #fff;
+    color: #FF4E4E; }
+
+.regular-header {
+  font-family: "merriweather-regular";
+  font-size: 48px;
+  text-align: center;
+  padding-top: 10rem; }
+
+.about {
+  position: relative;
+  background: #fff; }
+  .about .regular-header {
+    color: #00CFEE; }
+
+.our-team {
+  background: -webkit-gradient(linear, left bottom, left top, from(#fff), to(#C9EEF6));
+  background: -webkit-linear-gradient(bottom, #fff, #C9EEF6);
+  background: -o-linear-gradient(bottom, #fff, #C9EEF6);
+  background: linear-gradient(to top, #fff, #C9EEF6); }
+  .our-team .regular-header {
+    color: #365257; }
+
+.container-smaller {
+  width: 1200px;
+  margin: 0 auto; }
+
+.teammate {
+  text-align: center;
+  font-size: 2.2rem;
+  line-height: normal; }
+
+.team-avatar {
+  height: 17.6rem;
+  width: 17.6rem;
+  -webkit-border-radius: 50%;
+          border-radius: 50%; }
+
+.top-reasons {
+  background-color: #fff; }
+  .top-reasons .regular-header {
     color: #FF4E4E; }
