@@ -53,7 +53,6 @@ body
 	position: relative
 	color: #000
 	font-family: $default-font
-	overflow-x: hidden
 	margin: 0
 	a
 		text-decoration: none
@@ -168,7 +167,7 @@ body
 	&:focus
 		background-color: #fff
 		color: $accent
-
+        transition: .5s
 .img-matchmaking
 	max-width: 30rem
 	height: auto
@@ -201,11 +200,15 @@ body
 	&:focus
 		background-color: #fff
 		color: $main-button
+        transition: .5s
 .regular-header
 	font-family: $headers-font
 	font-size: 48px
 	text-align: center
 	padding-top: 10rem
+.container-smaller
+  width: 1200px
+  margin: 0 auto
 .about
 	position: relative
 	background: #fff
@@ -231,24 +234,104 @@ body
 	//	top: 27px
 	.regular-header
 		color: $accent
+.video-frame
+  position: relative
+  padding: 2.5rem 0
+  height: 0
+  iframe
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+
+.feature-about
+  img
+    width: 8rem
+    height: 8rem
+  display: flex
+  align-items: center
+  justify-content: center
+  color: $main-button
+  font-family: $items-font
+  font-size: 2.8rem
+  line-height: normal
+  p
+    padding-left: 4rem
+
 
 .our-team
 	background: linear-gradient(to top, #fff, #C9EEF6 )
 	.regular-header
 		color: $big-text
-.container-smaller
-	width: 1200px
-	margin: 0 auto
-.teammate
-	text-align: center
-	font-size: 2.2rem
-	line-height: normal
-.team-avatar
-	height: 17.6rem
-	width: 17.6rem
-	border-radius: 50%
+
+//.teammate
+//	text-align: center
+//	font-size: 2.2rem
+//	line-height: normal
+//	p
+//		margin: 0
+//.team-avatar
+//	height: 17.6rem
+//	width: 17.6rem
+//	border-radius: 50%
+//	background-color: #000
 
 .top-reasons
-	background-color: #fff
+  background-color: #fff
+  max-width: 137rem
+  margin: 0 auto
+  padding-bottom: 10rem
+  .regular-header
+    color: $main-button
+  .big-number
+    font-family: "merriweather-black"
+    font-size: 20rem
+    color: $background
+  .one-reason
+    font-family: $items-font
+    font-size: 2.4rem
+    line-height: normal
+    color: $big-text
+    display: flex
+    align-items: center
+
+.get-ebook
+	padding: 7rem 0
+	background: linear-gradient(to right, rgba(#00CFEE, .5), rgba(#C9EEF6, .5)), url(../img/hearts.jpg) no-repeat
+	background-size: cover
+	text-align: center
+	p
+		font-family: $button-font
+		font-size: 2.8rem
+		color: $big-text
+		line-height: normal
+		max-width: 74rem
+		margin: 0 auto
 	.regular-header
-		color: $main-button
+		color: #fff
+		padding: 0
+		line-height: normal
+	.red-btn
+		padding: 1rem
+		width: 24rem
+	.facebook-btn
+		padding: 1rem
+		width: 24rem
+		font-family: $button-font
+		color: #fff
+		font-size: 2.4rem
+		background-color: #3b5998
+		border-radius: $radius
+		line-height: 2.4rem
+		cursor: pointer
+		box-shadow: none
+		border: none
+		margin-right: 2rem
+		&:focus
+			background-color: #fff
+			color: #3b5998
+            transition: .5s
+.success-stories
+  .regular-header
+    color: $big-text

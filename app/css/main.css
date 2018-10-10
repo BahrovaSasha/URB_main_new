@@ -2004,7 +2004,6 @@ body {
   position: relative;
   color: #000;
   font-family: "opensans-light", sans-serif;
-  overflow-x: hidden;
   margin: 0; }
   body a {
     text-decoration: none; }
@@ -2152,7 +2151,8 @@ body {
           box-shadow: none; }
   .btn-blue:focus {
     background-color: #fff;
-    color: #00CFEE; }
+    color: #00CFEE;
+      color-transition: .5s; }
 
 .img-matchmaking {
   max-width: 30rem;
@@ -2200,7 +2200,8 @@ body {
   border: none; }
   .red-btn:focus {
     background-color: #fff;
-    color: #FF4E4E; }
+    color: #FF4E4E;
+      color-transition: .5s; }
 
 .regular-header {
   font-family: "merriweather-regular";
@@ -2208,11 +2209,49 @@ body {
   text-align: center;
   padding-top: 10rem; }
 
+.container-smaller {
+  width: 1200px;
+  margin: 0 auto; }
+
 .about {
   position: relative;
   background: #fff; }
   .about .regular-header {
     color: #00CFEE; }
+
+.video-frame {
+  position: relative;
+  padding: 2.5rem 0;
+  height: 0; }
+  .video-frame iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+
+.feature-about {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #FF4E4E;
+  font-family: "opensans-semibolditalic";
+  font-size: 2.8rem;
+  line-height: normal; }
+  .feature-about img {
+    width: 8rem;
+    height: 8rem; }
+  .feature-about p {
+    padding-left: 4rem; }
 
 .our-team {
   background: -webkit-gradient(linear, left bottom, left top, from(#fff), to(#C9EEF6));
@@ -2222,22 +2261,73 @@ body {
   .our-team .regular-header {
     color: #365257; }
 
-.container-smaller {
-  width: 1200px;
-  margin: 0 auto; }
-
-.teammate {
-  text-align: center;
-  font-size: 2.2rem;
-  line-height: normal; }
-
-.team-avatar {
-  height: 17.6rem;
-  width: 17.6rem;
-  -webkit-border-radius: 50%;
-          border-radius: 50%; }
-
 .top-reasons {
-  background-color: #fff; }
+  background-color: #fff;
+  max-width: 137rem;
+  margin: 0 auto;
+  padding-bottom: 10rem; }
   .top-reasons .regular-header {
     color: #FF4E4E; }
+  .top-reasons .big-number {
+    font-family: "merriweather-black";
+    font-size: 20rem;
+    color: #C9EEF6; }
+  .top-reasons .one-reason {
+    font-family: "opensans-semibolditalic";
+    font-size: 2.4rem;
+    line-height: normal;
+    color: #365257;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+
+.get-ebook {
+  padding: 7rem 0;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 207, 238, 0.5)), to(rgba(201, 238, 246, 0.5))), url(../img/hearts.jpg) no-repeat;
+  background: -webkit-linear-gradient(left, rgba(0, 207, 238, 0.5), rgba(201, 238, 246, 0.5)), url(../img/hearts.jpg) no-repeat;
+  background: -o-linear-gradient(left, rgba(0, 207, 238, 0.5), rgba(201, 238, 246, 0.5)), url(../img/hearts.jpg) no-repeat;
+  background: linear-gradient(to right, rgba(0, 207, 238, 0.5), rgba(201, 238, 246, 0.5)), url(../img/hearts.jpg) no-repeat;
+  -webkit-background-size: cover;
+          background-size: cover;
+  text-align: center; }
+  .get-ebook p {
+    font-family: "opensans-bold";
+    font-size: 2.8rem;
+    color: #365257;
+    line-height: normal;
+    max-width: 74rem;
+    margin: 0 auto; }
+  .get-ebook .regular-header {
+    color: #fff;
+    padding: 0;
+    line-height: normal; }
+  .get-ebook .red-btn {
+    padding: 1rem;
+    width: 24rem; }
+  .get-ebook .facebook-btn {
+    padding: 1rem;
+    width: 24rem;
+    font-family: "opensans-bold";
+    color: #fff;
+    font-size: 2.4rem;
+    background-color: #3b5998;
+    -webkit-border-radius: 22px;
+            border-radius: 22px;
+    line-height: 2.4rem;
+    cursor: pointer;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    border: none;
+    margin-right: 2rem; }
+    .get-ebook .facebook-btn:focus {
+      background-color: #fff;
+      color: #3b5998;
+        color-transition: .5s; }
+
+.success-stories .regular-header {
+  color: #365257; }
