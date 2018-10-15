@@ -163,7 +163,7 @@ body
 	border-radius: $radius
 	line-height: 2.4rem
 	cursor: pointer
-	box-shadow: none
+    border: none
 	&:focus
 		background-color: #fff
 		color: $accent
@@ -205,7 +205,7 @@ body
 	font-family: $headers-font
 	font-size: 48px
 	text-align: center
-	padding-top: 10rem
+	padding-top: 3rem
 .container-smaller
   width: 1200px
   margin: 0 auto
@@ -331,7 +331,79 @@ body
 		&:focus
 			background-color: #fff
 			color: #3b5998
-            transition: .5s
+            transition: ease .5s
 .success-stories
+  margin: 0 2rem
+  display: flex
+  flex-direction: column
+  align-items: center
   .regular-header
     color: $big-text
+  h4
+    font-family: $items-font
+    font-size: 2.4rem
+    color: $big-text
+    text-align: left
+    margin: 1rem 0 0
+  .red-btn
+    margin: 7rem 0
+
+
+.photo-story
+	position: relative
+	height: 264px
+	width: 100%
+	overflow: hidden
+	border-radius: 8px
+	img
+		position: absolute
+		//left: 0
+		//top: 50%
+		width: 100%
+		height: auto
+.story-wrap
+  display: flex
+  flex-direction: column
+  align-items: center
+
+  .btn-to-blog
+    font-family: $default-font
+    color: #fff
+    font-size: 2.2rem
+    background-color: $accent
+    padding: 1rem 1.8rem
+    border-radius: $radius
+    line-height: 2.4rem
+    cursor: pointer
+    box-shadow: none
+    opacity: .4
+    &:focus
+      background-color: #fff
+      color: $accent
+      transition: .5s
+    a
+      color: #fff
+
+.join-us-fb
+
+  .join-header
+    background: linear-gradient(to right, #00CFEE, #C9EEF6)
+    color: #fff
+    font-family: $items-font
+    font-size: 3.6rem
+    text-align: center
+    line-height: 1.4
+    padding: .2rem 0
+  .fb-post
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 2rem 0
+
+.contacts
+  background: linear-gradient(to right, rgba(0, 0, 0, 0) 10%, #C9EEF6), url(../img/girl.jpg) no-repeat 0 110%, 0 0
+  background-size: contain
+  .contact-items
+    padding: 10rem
+  .describe-form
+    padding: 10rem

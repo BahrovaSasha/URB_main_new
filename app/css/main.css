@@ -2147,8 +2147,7 @@ body {
           border-radius: 22px;
   line-height: 2.4rem;
   cursor: pointer;
-  -webkit-box-shadow: none;
-          box-shadow: none; }
+    cursor-border: none; }
   .btn-blue:focus {
     background-color: #fff;
     color: #00CFEE;
@@ -2207,7 +2206,7 @@ body {
   font-family: "merriweather-regular";
   font-size: 48px;
   text-align: center;
-  padding-top: 10rem; }
+  padding-top: 3rem; }
 
 .container-smaller {
   width: 1200px;
@@ -2327,7 +2326,117 @@ body {
     .get-ebook .facebook-btn:focus {
       background-color: #fff;
       color: #3b5998;
-        color-transition: .5s; }
+        color-transition: ease .5s; }
 
-.success-stories .regular-header {
-  color: #365257; }
+.success-stories {
+  margin: 0 2rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .success-stories .regular-header {
+    color: #365257; }
+  .success-stories h4 {
+    font-family: "opensans-semibolditalic";
+    font-size: 2.4rem;
+    color: #365257;
+    text-align: left;
+    margin: 1rem 0 0; }
+  .success-stories .red-btn {
+    margin: 7rem 0; }
+
+.photo-story {
+  position: relative;
+  height: 264px;
+  width: 100%;
+  overflow: hidden;
+  -webkit-border-radius: 8px;
+          border-radius: 8px; }
+  .photo-story img {
+    position: absolute;
+    width: 100%;
+    height: auto; }
+
+.story-wrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .story-wrap .btn-to-blog {
+    font-family: "opensans-light", sans-serif;
+    color: #fff;
+    font-size: 2.2rem;
+    background-color: #00CFEE;
+    padding: 1rem 1.8rem;
+    -webkit-border-radius: 22px;
+            border-radius: 22px;
+    line-height: 2.4rem;
+    cursor: pointer;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    opacity: .4; }
+    .story-wrap .btn-to-blog:focus {
+      background-color: #fff;
+      color: #00CFEE;
+      -webkit-transition: .5s;
+      -o-transition: .5s;
+      transition: .5s; }
+    .story-wrap .btn-to-blog a {
+      color: #fff; }
+
+.join-us-fb .join-header {
+  background: -webkit-gradient(linear, left top, right top, from(#00CFEE), to(#C9EEF6));
+  background: -webkit-linear-gradient(left, #00CFEE, #C9EEF6);
+  background: -o-linear-gradient(left, #00CFEE, #C9EEF6);
+  background: linear-gradient(to right, #00CFEE, #C9EEF6);
+  color: #fff;
+  font-family: "opensans-semibolditalic";
+  font-size: 3.6rem;
+  text-align: center;
+  line-height: 1.4;
+  padding: .2rem 0; }
+
+.join-us-fb .fb-post {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 2rem 0; }
+
+.contacts {
+  background: -webkit-gradient(linear, left top, right top, color-stop(10%, rgba(0, 0, 0, 0)), to(#C9EEF6)), url(../img/girl.jpg) no-repeat 0 110%, 0 0;
+  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 10%, #C9EEF6), url(../img/girl.jpg) no-repeat 0 110%, 0 0;
+  background: -o-linear-gradient(left, rgba(0, 0, 0, 0) 10%, #C9EEF6), url(../img/girl.jpg) no-repeat 0 110%, 0 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0) 10%, #C9EEF6), url(../img/girl.jpg) no-repeat 0 110%, 0 0;
+  -webkit-background-size: contain;
+          background-size: contain; }
+  .contacts .contact-items {
+    padding: 10rem; }
+  .contacts .describe-form {
+    padding: 10rem; }
