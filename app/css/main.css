@@ -2051,6 +2051,9 @@ body {
   background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 70%, #c9eef6), url(../img/portrait.jpg) no-repeat 70% 80%, -10% 40%;
   background: -o-linear-gradient(left, rgba(0, 0, 0, 0) 70%, #c9eef6), url(../img/portrait.jpg) no-repeat 70% 80%, -10% 40%;
   background: linear-gradient(to right, rgba(0, 0, 0, 0) 70%, #c9eef6), url(../img/portrait.jpg) no-repeat 70% 80%, -10% 40%; }
+  @media only screen and (max-width: 1200px) {
+    .left-img {
+      background-position: center; } }
 
 .header-main_content {
   padding: 3rem 3rem 0 0; }
@@ -2067,6 +2070,9 @@ body {
     color: #365257;
     line-height: 6.8rem;
     letter-spacing: 0.2rem; }
+    @media only screen and (max-width: 1200px) {
+      .header-main_content h1 {
+        font-size: 3.6rem; } }
     .header-main_content h1 .and {
       font-size: 3.2rem;
       font-family: inherit; }
@@ -2080,6 +2086,10 @@ body {
     font-size: 2.4rem;
     color: #fff;
     padding-right: 2rem; }
+    @media only screen and (max-width: 1200px) {
+      .header-main_content .main-features {
+        font-size: 2rem;
+        line-height: 1.4rem; } }
 
 .signature {
   font-family: "opensans-lightitalic";
@@ -2087,6 +2097,9 @@ body {
   line-height: 2.2rem;
   color: #365257;
   padding-top: 4rem; }
+  @media only screen and (max-width: 1200px) {
+    .signature {
+      padding-top: 2rem; } }
 
 .one-feature {
   background-color: #00CFEE;
@@ -2127,6 +2140,9 @@ body {
       -ms-flex-align: center;
           align-items: center;
   padding-right: 2rem; }
+  @media only screen and (max-width: 1200px) {
+    .right-info {
+      padding-right: 1rem; } }
   .right-info .lang {
     font-size: 2.4rem;
     color: #00CFEE;
@@ -2140,6 +2156,9 @@ body {
       background-color: #00CFEE;
       padding: 0 1rem;
       cursor: auto; }
+    @media (max-width: 1400px) {
+      .right-info .lang {
+        font-size: 1.8rem; } }
   .right-info .top-phones {
     display: -webkit-box;
     display: -webkit-flex;
