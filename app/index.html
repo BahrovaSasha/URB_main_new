@@ -38,29 +38,42 @@
                     <div class="row">
                         <div class="col-lg-8 main-features">
                             <div class="row">
-                                <div class="col-lg-6">
+                                <div class="col-lg-6 features-col">
                                     <h3 class="one-feature">Online<br>Dating</h3>
                                     <h3 class="one-feature">Personal<br>Matchmaking</h3>
+                                    <h3 class="one-feature">Love<br>Marathon</h3>
                                 </div>
-                                <div class="col-lg-6">
+                                <div class="col-lg-6 features-col">
                                     <h3 class="one-feature">Matchmaking<br>Tours</h3>
                                     <h3 class="one-feature">Senior<br>Dating</h3>
+                                    <p class="signature">Valentina Gutorova <br>Founder, executive matchmaker of URB</p>
                                 </div>
+
                             </div>
                         </div>
                         <div class="col-lg-4 img-matchmaking">
                             <img src="img/matchmaking-institute.png">
+                            <button class="red-btn">Read blog</button>
                         </div>
                     </div>
-                    <div class="head-signature">
-                        <p>Valentina Gutorova <br>Founder, executive matchmaker of URB</p>
-                        <button class="red-btn">Read blog</button>
-                    </div>
+
                 </div>
             </div>
         </section>
 
         <section class="about">
+            <!--<div class="container-svg">-->
+                <!--<svg viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet">-->
+                    <!--<path d="M0,100 C150,200 350,0 500,100 L500,00 L0,0 Z" style="stroke: none; fill:#fff; transform: rotate(180deg;"></path>-->
+                <!--</svg>-->
+            <!--</div>-->
+
+            <!--<div class="container-svg">-->
+                <!--<svg viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet">-->
+                    <!--<path d="M0,100 C150,200 350,0 500,100 L500,00 L0,0 Z" style="stroke: none; fill:#fff;"></path>-->
+                <!--</svg>-->
+            <!--</div>-->
+
             <h2 class="regular-header">Few words about us</h2>
             <div class="container-smaller">
                 <div class="video-frame">
@@ -236,14 +249,18 @@
                     <form>
                         <div class="describe-form-field">
                             <input type="text" class="describe-input" placeholder="Name">
+                            <span class="error-message"></span>
                         </div>
                         <div class="describe-form-field">
                             <input type="tel" class="describe-input" placeholder="Telephone">
+                            <span class="error-message"></span>
                         </div>
-                        <div class="describe-form-field">
+                        <div class="describe-form-field_text">
                             <textarea class="describe-input" placeholder="Tell us about your situation and a woman you want to meet"></textarea>
                         </div>
-                        <button type="button" class="red-btn">Send</button>
+                        <div class="button-wrap">
+                            <button type="button" class="red-btn">Send</button>
+                        </div>
                     </form>
 
                 </div>
@@ -252,13 +269,13 @@
     </main>
     <footer>
        <div class="row">
-           <div class="col-lg-2 footer-logo">
+           <div class="col-lg-2 footer-item">
                <img src="img/logo-3.png">
            </div>
-           <div class="col-lg-2 link-blog">
-               <a>Read blog</a>
+           <div class="col-lg-4 footer-item">
+               <a class="btn-to-blog">Read blog</a>
            </div>
-           <div class="col-lg-2 small-contacts">
+           <div class="col-lg-2 small-contacts footer-item">
                <p>urb@mail.com</p>
                <p>Love Marathon</p>
            </div>
@@ -266,11 +283,11 @@
                <!--<p>+1 646 652 0135</p>-->
                <!--<p>+38 095 304 64 10</p>-->
            <!--</div>-->
-           <div class="col-lg-2 small-contacts">
+           <div class="col-lg-2 small-contacts footer-item">
                <p>Personal Matchmaking</p>
                <p>Senior Dating</p>
            </div>
-           <div class="col-lg-2 small-contacts">
+           <div class="col-lg-2 small-contacts footer-item">
                <p>Online Dating</p>
                <p>Matchmaking Tours</p>
            </div>
