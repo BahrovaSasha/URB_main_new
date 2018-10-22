@@ -66,33 +66,46 @@ body
 .main-urb
   overflow-x: hidden
 .header-main
-	height: 100vh
-	min-height: 80rem
-	width: 100%
-	background-color: $background
-	background-size: cover
-	background-repeat: no-repeat
-	display: flex
-	flex-direction: column
-	justify-content: flex-start
-	overflow-x: hidden
-	.header-row
-		height: inherit
+  height: 100vh
+  min-height: 60rem
+  width: 100%
+  background-color: $background
+  background-size: cover
+  background-repeat: no-repeat
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+  overflow-x: hidden
+  @include lg
+    min-height: 52rem
+  .header-row
+    height: inherit
+    width: 100%
 
 .left-img
-  height: 100vh
+  min-height: 52rem
   width: auto
   position: relative
   background-size: contain
   background: linear-gradient(to right, rgba(0, 0, 0, 0) 70%, rgba(#C9EEF6, 1)), url(../img/portrait.jpg) no-repeat 70% 80%, -10% 40%
   @include xl
     background-position: center
+  @include lg
+    background: linear-gradient(to right, rgba(0, 0, 0, 0) 45%, rgba(#C9EEF6, 1)), url(../img/portrait.jpg) no-repeat
+    background-position: 60% 40%
+  @include md
+    display: none
 .header-main_content
+  width: 100%
   padding: 3rem 3rem 0 0
   @include rwd(1400)
       padding: 1.4rem 1rem 0 0
   @include xl
       padding: 1.4rem 0 0 0
+  @include lg
+    padding: 1.4rem 1rem 0
+  @include md
+    padding: 1.4rem 2.4rem 0
   h1
     font-family: "merriweather-black"
     font-size: 4rem
@@ -100,16 +113,27 @@ body
     color: $big-text
     line-height: 6.8rem
     letter-spacing: 0.2rem
-    @include xl
+    @include rwd(1300)
       font-size: 3.6rem
+      margin-bottom: .4rem
+    @include xl
+      font-size: 2.8rem
+      line-height: 4rem
+    @include lg
+      font-size: 2.4rem
     .and
       font-size: 3.2rem
       font-family: inherit
-    .result
-      font-family: $description-font
-      font-size: 2.4rem
-      text-transform: lowercase
-      letter-spacing: normal
+      @include xl
+        font-size: 2.4rem
+
+  .result
+    font-family: $description-font
+    font-size: 2.4rem
+    text-transform: lowercase
+    letter-spacing: normal
+    @include lg
+      font-size: 2rem
   .main-features
     font-family: $items-font
     font-size: 2.4rem
@@ -117,7 +141,13 @@ body
     padding-right: 2rem
     @include xl
       font-size: 2rem
-      line-height: 1.4rem
+    @include lg
+      font-size: 1.4rem
+    .features-col
+      @include md
+        display: flex
+        flex-direction: column
+        align-content: center
 
 
 
@@ -131,6 +161,8 @@ body
   padding-top: 4rem
   @include xl
     padding-top: 2rem
+  @include lg
+    padding-top: 0
 
 
 .one-feature
@@ -138,20 +170,32 @@ body
   border-radius: $radius
   line-height: 3.6rem
   padding: 1.2rem 2.2rem
+  @include xl
+    line-height: 3rem
+    padding: 1.2rem 1.8rem
+  @include lg
+    padding: 1rem 1.2rem
+    margin: 1rem 0
+    line-height: 2.4rem
 
 
 
 
 .top-head
+  width: 100%
   margin: 0 2rem
   display: flex
   justify-content: space-between
+  @include lg
+    margin: 0 1rem
   .main-logo
-	  width: 30%
-	  height: auto
-	  img
-		  width: 100%
-		  height: auto
+    width: 30%
+    height: auto
+    @include rwd(900px)
+      width: 20%
+    img
+      width: 100%
+      height: auto
 
 .right-info
   width: 65%
@@ -161,10 +205,16 @@ body
   padding-right: 2rem
   @include xl
     padding-right: 1rem
+  @include lg
+    padding-right: 0
+  @include md
+    justify-content: space-around
   .lang
     font-size: 2.4rem
     color: $accent
     line-height: 2rem
+    //@include lg
+    //  padding: 0 .1rem
     .onelang
       cursor: pointer
     .onelang.active
@@ -175,6 +225,8 @@ body
       cursor: auto
     @include rwd(1400)
       font-size: 1.8rem
+    @include xl
+      font-size: 1.2rem
   .top-phones
 
       display: flex
@@ -185,20 +237,25 @@ body
         color: $accent
       @include rwd(1400)
         font-size: 1.4rem
+      @include xl
+        font-size: 1.2rem
 .btn-blue
-	font-family: $button-font
-	color: #fff
-	font-size: 2.4rem
-	background-color: $accent
-	padding: 1rem 1.8rem
-	border-radius: $radius
-	line-height: 2.4rem
-	cursor: pointer
-	border: none
-	&:focus
-		background-color: #fff
-		color: $accent
-        transition: .5s
+  font-family: $button-font
+  color: #fff
+  font-size: 2.4rem
+  background-color: $accent
+  padding: 1rem 1.8rem
+  border-radius: $radius
+  line-height: 2.4rem
+  cursor: pointer
+  border: none
+  @include lg
+    font-size: 1.8rem
+  &:focus
+    background-color: #fff
+    color: $accent
+    transition: .5s
+
 
 .red-btn
   font-family: $button-font
@@ -211,6 +268,8 @@ body
   cursor: pointer
   box-shadow: none
   border: none
+  @include lg
+    font-size: 1.8rem
   &:focus
     background-color: #fff
     color: $main-button
@@ -223,10 +282,15 @@ body
   flex-direction: column
   align-items: center
   justify-content: space-between
-
+  @include lg
+    justify-content: flex-end
+  @include md
+    justify-content: space-between
   img
     width: 100%
     height: auto
+    @include lg
+      width: 90%
 
   .red-btn
     margin: 1em 0
@@ -335,41 +399,43 @@ body
     align-items: center
 
 .get-ebook
-	padding: 7rem 0
-	background: linear-gradient(to right, rgba(#00CFEE, .5), rgba(#C9EEF6, .5)), url(../img/hearts.jpg) no-repeat
-	background-size: cover
-	text-align: center
-	p
-		font-family: $button-font
-		font-size: 2.8rem
-		color: $big-text
-		line-height: normal
-		max-width: 74rem
-		margin: 0 auto
-	.regular-header
-		color: #fff
-		padding: 0
-		line-height: normal
-	.red-btn
-		padding: 1rem
-		width: 24rem
-	.facebook-btn
-		padding: 1rem
-		width: 24rem
-		font-family: $button-font
-		color: #fff
-		font-size: 2.4rem
-		background-color: #3b5998
-		border-radius: $radius
-		line-height: 2.4rem
-		cursor: pointer
-		box-shadow: none
-		border: none
-		margin-right: 2rem
-		&:focus
-			background-color: #fff
-			color: #3b5998
-            transition: ease .5s
+  padding: 7rem 0
+  background: linear-gradient(to right, rgba(#00CFEE, .5), rgba(#C9EEF6, .5)), url(../img/hearts.jpg) no-repeat
+  background-size: cover
+  text-align: center
+  p
+    font-family: $button-font
+    font-size: 2.8rem
+    color: $big-text
+    line-height: normal
+    max-width: 74rem
+    margin: 0 auto
+  .regular-header
+    color: #fff
+    padding: 0
+    line-height: normal
+  .red-btn
+    padding: 1rem
+    width: 24rem
+  .facebook-btn
+    padding: 1rem
+    width: 24rem
+    font-family: $button-font
+    color: #fff
+    font-size: 2.4rem
+    background-color: #3b5998
+    border-radius: $radius
+    line-height: 2.4rem
+    cursor: pointer
+    box-shadow: none
+    border: none
+    margin-right: 2rem
+    @include lg
+      font-size: 1.8rem
+    &:focus
+      background-color: #fff
+      color: #3b5998
+      transition: ease .5s
 .success-stories
   margin: 0 2rem
   display: flex
