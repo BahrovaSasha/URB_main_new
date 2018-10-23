@@ -81,32 +81,34 @@
     <session id="271084303">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
-          <entry key="project.open.time.7" value="2" />
+          <entry key="project.closed" value="4" />
+          <entry key="project.open.time.7" value="3" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="sass" value="1" />
+          <entry key="js" value="1" />
+          <entry key="sass" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Sass" value="1" />
+          <entry key="JavaScript" value="1" />
+          <entry key="Sass" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="62" />
-          <entry key="sass" value="1367" />
+          <entry key="html" value="199" />
+          <entry key="sass" value="2050" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="62" />
-          <entry key="Sass" value="1367" />
+          <entry key="HTML" value="199" />
+          <entry key="Sass" value="2050" />
         </counts>
       </usages-collector>
     </session>
@@ -116,8 +118,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/sass/main.sass">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="287" column="34" selection-start-line="287" selection-start-column="34" selection-end-line="287" selection-end-column="34" />
+            <state relative-caret-position="331">
+              <caret line="158" column="22" lean-forward="true" selection-start-line="158" selection-start-column="22" selection-end-line="158" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -130,8 +132,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="36" column="110" selection-start-line="36" selection-start-column="110" selection-end-line="36" selection-end-column="110" />
+            <state relative-caret-position="351">
+              <caret line="54" column="71" selection-start-line="54" selection-start-column="71" selection-end-line="54" selection-end-column="71" />
             </state>
           </provider>
         </entry>
@@ -140,10 +142,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>.messages-footer-bottom</find>
-      <find>bottom-le</find>
-      <find>fileUpload</find>
-      <find>message-block</find>
       <find>btn-rec</find>
       <find>.last-message</find>
       <find>dialog-partner-ava</find>
@@ -157,19 +155,23 @@
       <find>left</find>
       <find>left-</find>
       <find>lang</find>
-      <find>features-col</find>
-      <find>img-</find>
       <find>img</find>
-      <find>h1</find>
       <find>btn-blue</find>
       <find>h3</find>
       <find>btn</find>
       <find>top-head</find>
-      <find>header-main</find>
-      <find>features</find>
       <find>top</find>
       <find>result</find>
       <find>top-</find>
+      <find>left-im</find>
+      <find>img-</find>
+      <find>features</find>
+      <find>header-row</find>
+      <find>header-main_</find>
+      <find>top-phones</find>
+      <find>header-main</find>
+      <find>features-col</find>
+      <find>h1</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -232,9 +234,9 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="352" />
-    <option name="y" value="66" />
-    <option name="width" value="859" />
+    <option name="x" value="339" />
+    <option name="y" value="139" />
+    <option name="width" value="1105" />
     <option name="height" value="734" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -322,18 +324,18 @@
       <workItem from="1538721690497" duration="8137000" />
       <workItem from="1539979397794" duration="325000" />
       <workItem from="1540025802380" duration="4291000" />
-      <workItem from="1540201121704" duration="9764000" />
+      <workItem from="1540201121704" duration="10346000" />
+      <workItem from="1540230490439" duration="5787000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="121813000" />
+    <option name="totallyTimeSpent" value="128182000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="352" y="66" width="859" height="734" extended-state="0" />
-    <editor active="true" />
+    <frame x="339" y="139" width="1105" height="734" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15789473" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27939793" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Gulp" order="2" side_tool="true" />
       <window_info id="npm" order="3" side_tool="true" />
@@ -384,13 +386,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/gulpfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1326">
-          <caret line="78" column="6" selection-start-line="78" selection-start-column="6" selection-end-line="78" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/libs/bootstrap-grid/bootstrap-grid.scss">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -408,13 +403,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/sass/_fonts.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="30" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/!Realbrides_extras/mail-new/to-matchmaking/шаблон_письма_.html" />
     <entry file="file://$PROJECT_DIR$/app/sass/_vars.sass">
       <provider selected="true" editor-type-id="text-editor">
@@ -424,20 +412,37 @@
       </provider>
     </entry>
     <entry file="file://D:/!Realbrides_extras/mail-new/to-matchmaking/start_communication.html" />
-    <entry file="file://$PROJECT_DIR$/app/index.html">
+    <entry file="file://$PROJECT_DIR$/app/sass/mixins/_font-face.sass">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/sass/_fonts.sass">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="36" column="110" selection-start-line="36" selection-start-column="110" selection-end-line="36" selection-end-column="110" />
+        <state relative-caret-position="30">
+          <caret line="2" column="30" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/sass/_media.sass">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="54" column="71" selection-start-line="54" selection-start-column="71" selection-end-line="54" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1170">
+          <caret line="78" column="6" selection-start-line="78" selection-start-column="6" selection-end-line="78" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/sass/main.sass">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="287" column="34" selection-start-line="287" selection-start-column="34" selection-end-line="287" selection-end-column="34" />
+        <state relative-caret-position="331">
+          <caret line="158" column="22" lean-forward="true" selection-start-line="158" selection-start-column="22" selection-end-line="158" selection-end-column="22" />
         </state>
       </provider>
     </entry>

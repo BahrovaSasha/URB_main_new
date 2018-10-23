@@ -81,13 +81,14 @@ body
   .header-row
     height: inherit
     width: 100%
+    overflow-x: hidden
 
 .left-img
   min-height: 52rem
   width: auto
   position: relative
   background-size: contain
-  background: linear-gradient(to right, rgba(0, 0, 0, 0) 70%, rgba(#C9EEF6, 1)), url(../img/portrait.jpg) no-repeat 70% 80%, -10% 40%
+  background: linear-gradient(to right, rgba(0, 0, 0, 0) 70%, rgba(#C9EEF6, 1)), url(../img/portrait.jpg) no-repeat 70% 60%, -10% 40%
   @include xl
     background-position: center
   @include lg
@@ -98,6 +99,7 @@ body
 .header-main_content
   width: 100%
   padding: 3rem 3rem 0 0
+  overflow-x: hidden
   @include rwd(1400)
       padding: 1.4rem 1rem 0 0
   @include xl
@@ -106,6 +108,7 @@ body
     padding: 1.4rem 1rem 0
   @include md
     padding: 1.4rem 2.4rem 0
+
   h1
     font-family: "merriweather-black"
     font-size: 4rem
@@ -121,11 +124,18 @@ body
       line-height: 4rem
     @include lg
       font-size: 2.4rem
+    @include sm
+      font-size: 1.8rem
+      line-height: 3rem
+      letter-spacing: 0.1rem
+      text-align: center
     .and
       font-size: 3.2rem
       font-family: inherit
       @include xl
         font-size: 2.4rem
+      @include sm
+        font-size: 1.4rem
 
   .result
     font-family: $description-font
@@ -134,6 +144,8 @@ body
     letter-spacing: normal
     @include lg
       font-size: 2rem
+    @include sm
+      font-size: 1.4rem
   .main-features
     font-family: $items-font
     font-size: 2.4rem
@@ -143,6 +155,8 @@ body
       font-size: 2rem
     @include lg
       font-size: 1.4rem
+    @include sm
+      padding-right: 0
     .features-col
       @include md
         display: flex
@@ -177,6 +191,8 @@ body
     padding: 1rem 1.2rem
     margin: 1rem 0
     line-height: 2.4rem
+  @include sm
+    text-align: center
 
 
 
@@ -213,32 +229,46 @@ body
     font-size: 2.4rem
     color: $accent
     line-height: 2rem
-    //@include lg
-    //  padding: 0 .1rem
+    @include sm
+      display: flex
+      flex-direction: column
+      align-items: center
+      padding-right: 1rem
     .onelang
       cursor: pointer
+      @include sm
+        padding-top: .8rem
     .onelang.active
       color: #fff
       border-radius: $radius
       background-color: $accent
       padding: 0 1rem
       cursor: auto
+      @include md
+        padding: 0 .4rem
     @include rwd(1400)
       font-size: 1.8rem
     @include xl
       font-size: 1.2rem
   .top-phones
+    display: flex
+    flex-direction: column
+    font-size: 1.8rem
+    line-height: normal
 
-      display: flex
-      flex-direction: column
-      font-size: 1.8rem
-      line-height: normal
-      a
-        color: $accent
-      @include rwd(1400)
-        font-size: 1.4rem
-      @include xl
-        font-size: 1.2rem
+    a
+      color: $accent
+    @include rwd(1400)
+      font-size: 1.4rem
+    @include xl
+      font-size: 1.2rem
+  .callback-small
+    display: none
+    @include sm
+      display: block
+  .callback-big
+    @include sm
+      display: none
 .btn-blue
   font-family: $button-font
   color: #fff
@@ -291,6 +321,8 @@ body
     height: auto
     @include lg
       width: 90%
+    @include sm
+      display: none
 
   .red-btn
     margin: 1em 0
