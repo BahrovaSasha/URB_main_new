@@ -1991,7 +1991,8 @@ html {
   opacity: 1; }
 
 html, body {
-  height: 100%; }
+  height: 100%;
+  min-width: 250px; }
 
 html {
   font-size: 10px; }
@@ -2017,7 +2018,6 @@ body {
   overflow-x: hidden; }
 
 .header-main {
-  height: 100vh;
   min-height: 60rem;
   width: 100%;
   background-color: #C9EEF6;
@@ -2042,20 +2042,28 @@ body {
     .header-main {
       min-height: 52rem; } }
   .header-main .header-row {
-    height: inherit;
     width: 100%;
-    overflow-x: hidden; }
+    overflow-x: hidden;
+    margin: 0 auto; }
+    @media only screen and (max-width: 768px) {
+      .header-main .header-row {
+        background: -webkit-gradient(linear, left bottom, left top, from(#C9EEF6), to(#fff));
+        background: -webkit-linear-gradient(bottom, #C9EEF6, #fff);
+        background: -o-linear-gradient(bottom, #C9EEF6, #fff);
+        background: linear-gradient(to top, #C9EEF6, #fff); } }
 
 .left-img {
+  height: 100vh;
   min-height: 52rem;
   width: auto;
   position: relative;
   -webkit-background-size: contain;
           background-size: contain;
-  background: -webkit-gradient(linear, left top, right top, color-stop(70%, rgba(0, 0, 0, 0)), to(#c9eef6)), url(../img/portrait.jpg) no-repeat 70% 60%, -10% 40%;
-  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 70%, #c9eef6), url(../img/portrait.jpg) no-repeat 70% 60%, -10% 40%;
-  background: -o-linear-gradient(left, rgba(0, 0, 0, 0) 70%, #c9eef6), url(../img/portrait.jpg) no-repeat 70% 60%, -10% 40%;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0) 70%, #c9eef6), url(../img/portrait.jpg) no-repeat 70% 60%, -10% 40%; }
+  background: -webkit-gradient(linear, left top, right top, color-stop(70%, rgba(0, 0, 0, 0)), to(#c9eef6)), url(../img/portrait.jpg) no-repeat;
+  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 70%, #c9eef6), url(../img/portrait.jpg) no-repeat;
+  background: -o-linear-gradient(left, rgba(0, 0, 0, 0) 70%, #c9eef6), url(../img/portrait.jpg) no-repeat;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0) 70%, #c9eef6), url(../img/portrait.jpg) no-repeat;
+  background-position: 50% 40%; }
   @media only screen and (max-width: 1200px) {
     .left-img {
       background-position: center; } }
@@ -2106,10 +2114,11 @@ body {
         font-size: 2.4rem; } }
     @media only screen and (max-width: 576px) {
       .header-main_content h1 {
-        font-size: 1.8rem;
+        font-size: 2rem;
         line-height: 3rem;
-        letter-spacing: 0.1rem;
-        text-align: center; } }
+        letter-spacing: 0.25rem;
+        text-align: center;
+        margin: 2rem auto; } }
     .header-main_content h1 .and {
       font-size: 3.2rem;
       font-family: inherit; }
@@ -2143,7 +2152,7 @@ body {
         font-size: 1.4rem; } }
     @media only screen and (max-width: 576px) {
       .header-main_content .main-features {
-        padding-right: 0; } }
+        padding: 0; } }
     @media only screen and (max-width: 768px) {
       .header-main_content .main-features .features-col {
         display: -webkit-box;
@@ -2171,6 +2180,9 @@ body {
   @media only screen and (max-width: 992px) {
     .signature {
       padding-top: 0; } }
+  @media only screen and (max-width: 576px) {
+    .signature {
+      text-align: center; } }
 
 .one-feature {
   background-color: #00CFEE;
@@ -2189,7 +2201,9 @@ body {
       line-height: 2.4rem; } }
   @media only screen and (max-width: 576px) {
     .one-feature {
-      text-align: center; } }
+      text-align: center;
+      width: 50%;
+      margin: 1rem auto; } }
 
 .top-head {
   width: 100%;
@@ -2211,6 +2225,9 @@ body {
     @media (max-width: 900pxpx) {
       .top-head .main-logo {
         width: 20%; } }
+    @media only screen and (max-width: 350px) {
+      .top-head .main-logo {
+        width: 30%; } }
     .top-head .main-logo img {
       width: 100%;
       height: auto; }
@@ -2261,11 +2278,25 @@ body {
             -ms-flex-align: center;
                 align-items: center;
         padding-right: 1rem; } }
+    @media only screen and (max-width: 350px) {
+      .right-info .lang {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: row;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+            -ms-flex-pack: center;
+                justify-content: center; } }
     .right-info .lang .onelang {
       cursor: pointer; }
       @media only screen and (max-width: 576px) {
         .right-info .lang .onelang {
           padding-top: .8rem; } }
+      @media only screen and (max-width: 350px) {
+        .right-info .lang .onelang {
+          padding: 0 .4rem; } }
     .right-info .lang .onelang.active {
       color: #fff;
       -webkit-border-radius: 22px;
@@ -2302,6 +2333,9 @@ body {
     @media only screen and (max-width: 1200px) {
       .right-info .top-phones {
         font-size: 1.2rem; } }
+    @media only screen and (max-width: 350px) {
+      .right-info .top-phones {
+        display: none; } }
   .right-info .callback-small {
     display: none; }
     @media only screen and (max-width: 576px) {
@@ -2401,10 +2435,38 @@ body {
   font-size: 48px;
   text-align: center;
   padding-top: 3rem; }
+  @media only screen and (max-width: 1200px) {
+    .regular-header {
+      font-size: 3.6rem;
+      padding-top: 1rem; } }
+  @media only screen and (max-width: 576px) {
+    .regular-header {
+      font-size: 2.8rem; } }
+  @media only screen and (max-width: 350px) {
+    .regular-header {
+      font-size: 2.4rem; } }
 
 .container-smaller {
   width: 1200px;
   margin: 0 auto; }
+  @media (max-width: 1600px) {
+    .container-smaller {
+      width: 1000px; } }
+  @media only screen and (max-width: 1200px) {
+    .container-smaller {
+      width: 760px; } }
+  @media only screen and (max-width: 992px) {
+    .container-smaller {
+      width: 600px; } }
+  @media only screen and (max-width: 768px) {
+    .container-smaller {
+      width: 560px; } }
+  @media only screen and (max-width: 576px) {
+    .container-smaller {
+      width: 340px; } }
+  @media only screen and (max-width: 350px) {
+    .container-smaller {
+      width: 260px; } }
 
 .about {
   position: relative;
@@ -2414,7 +2476,8 @@ body {
 
 .video-frame {
   position: relative;
-  padding: 2.5rem 0;
+  padding-bottom: 56.25%;
+  padding-top: 25px;
   height: 0; }
   .video-frame iframe {
     position: absolute;
@@ -2422,6 +2485,23 @@ body {
     left: 0;
     width: 100%;
     height: 100%; }
+
+.about-tips {
+  padding: 2.5rem 0;
+  width: 1200px;
+  margin: 0 auto; }
+  @media only screen and (max-width: 1200px) {
+    .about-tips {
+      width: 900px; } }
+  @media only screen and (max-width: 992px) {
+    .about-tips {
+      width: 700px; } }
+  @media only screen and (max-width: 768px) {
+    .about-tips {
+      width: 350px; } }
+  @media only screen and (max-width: 576px) {
+    .about-tips {
+      width: 260px; } }
 
 .feature-about {
   display: -webkit-box;
@@ -2443,8 +2523,38 @@ body {
   .feature-about img {
     width: 8rem;
     height: 8rem; }
+    @media only screen and (max-width: 1200px) {
+      .feature-about img {
+        width: 6.4rem;
+        height: 6.4rem; } }
+    @media only screen and (max-width: 992px) {
+      .feature-about img {
+        width: 5rem;
+        height: 5rem; } }
+  @media only screen and (max-width: 1200px) {
+    .feature-about {
+      font-size: 2.4rem; } }
+  @media only screen and (max-width: 992px) {
+    .feature-about {
+      font-size: 2rem; } }
+  @media only screen and (max-width: 768px) {
+    .feature-about {
+      -webkit-box-pack: start;
+      -webkit-justify-content: flex-start;
+          -ms-flex-pack: start;
+              justify-content: flex-start; } }
+  @media only screen and (max-width: 576px) {
+    .feature-about {
+      font-size: 1.8rem;
+      padding: 1rem 0 1rem 4rem; } }
   .feature-about p {
     padding-left: 4rem; }
+    @media only screen and (max-width: 992px) {
+      .feature-about p {
+        padding-left: 2rem; } }
+    @media only screen and (max-width: 576px) {
+      .feature-about p {
+        padding-left: 1rem; } }
 
 .our-team {
   background: -webkit-gradient(linear, left bottom, left top, from(#fff), to(#C9EEF6));
