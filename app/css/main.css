@@ -2252,7 +2252,7 @@ body {
       padding-right: 1rem; } }
   @media only screen and (max-width: 992px) {
     .right-info {
-      padding-right: 0; } }
+      padding-right: .6rem; } }
   @media only screen and (max-width: 768px) {
     .right-info {
       -webkit-justify-content: space-around;
@@ -2439,12 +2439,16 @@ body {
     .regular-header {
       font-size: 3.6rem;
       padding-top: 1rem; } }
+  @media only screen and (max-width: 992px) {
+    .regular-header {
+      font-size: 3.2rem; } }
   @media only screen and (max-width: 576px) {
     .regular-header {
-      font-size: 2.8rem; } }
+      font-size: 2.8rem;
+      line-height: 1.6; } }
   @media only screen and (max-width: 350px) {
     .regular-header {
-      font-size: 2.4rem; } }
+      font-size: 2.2rem; } }
 
 .container-smaller {
   width: 1200px;
@@ -2567,14 +2571,33 @@ body {
 .top-reasons {
   background-color: #fff;
   max-width: 137rem;
+  width: 90%;
   margin: 0 auto;
   padding-bottom: 10rem; }
+  @media only screen and (max-width: 576px) {
+    .top-reasons {
+      padding-bottom: 4rem; } }
   .top-reasons .regular-header {
     color: #FF4E4E; }
+  @media only screen and (max-width: 768px) {
+    .top-reasons .all-reasons {
+      padding-left: 2rem; } }
   .top-reasons .big-number {
     font-family: "merriweather-black";
     font-size: 20rem;
     color: #C9EEF6; }
+    @media only screen and (max-width: 1200px) {
+      .top-reasons .big-number {
+        font-size: 16rem; } }
+    @media only screen and (max-width: 992px) {
+      .top-reasons .big-number {
+        font-size: 14rem; } }
+    @media only screen and (max-width: 576px) {
+      .top-reasons .big-number {
+        font-size: 12rem; } }
+    @media only screen and (max-width: 350px) {
+      .top-reasons .big-number {
+        font-size: 10rem; } }
   .top-reasons .one-reason {
     font-family: "opensans-semibolditalic";
     font-size: 2.4rem;
@@ -2588,6 +2611,18 @@ body {
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center; }
+    @media only screen and (max-width: 1200px) {
+      .top-reasons .one-reason {
+        font-size: 2rem; } }
+    @media only screen and (max-width: 992px) {
+      .top-reasons .one-reason {
+        font-size: 1.8rem; } }
+    @media only screen and (max-width: 350px) {
+      .top-reasons .one-reason {
+        font-size: 1.4rem; } }
+    @media only screen and (max-width: 576px) {
+      .top-reasons .one-reason p {
+        padding-left: 1rem; } }
 
 .get-ebook {
   padding: 7rem 0;
@@ -2598,6 +2633,9 @@ body {
   -webkit-background-size: cover;
           background-size: cover;
   text-align: center; }
+  @media only screen and (max-width: 992px) {
+    .get-ebook {
+      padding: 4rem 0; } }
   .get-ebook p {
     font-family: "opensans-bold";
     font-size: 2.8rem;
@@ -2605,6 +2643,13 @@ body {
     line-height: normal;
     max-width: 74rem;
     margin: 0 auto; }
+    @media only screen and (max-width: 768px) {
+      .get-ebook p {
+        font-size: 2rem; } }
+    @media only screen and (max-width: 576px) {
+      .get-ebook p {
+        font-size: 1.8rem;
+        width: 90%; } }
   .get-ebook .regular-header {
     color: #fff;
     padding: 0;
@@ -2630,6 +2675,10 @@ body {
     @media only screen and (max-width: 992px) {
       .get-ebook .facebook-btn {
         font-size: 1.8rem; } }
+    @media only screen and (max-width: 576px) {
+      .get-ebook .facebook-btn {
+        margin-right: 0;
+        margin-bottom: 1.6rem; } }
     .get-ebook .facebook-btn:focus {
       background-color: #fff;
       color: #3b5998;
@@ -2660,8 +2709,14 @@ body {
     color: #365257;
     text-align: left;
     margin: 1rem 0 0; }
+    @media only screen and (max-width: 1200px) {
+      .success-stories h4 {
+        font-size: 2rem; } }
   .success-stories .red-btn {
     margin: 7rem 0; }
+    @media only screen and (max-width: 992px) {
+      .success-stories .red-btn {
+        margin: 5rem 0; } }
 
 .photo-story {
   position: relative;
@@ -2670,6 +2725,12 @@ body {
   overflow: hidden;
   -webkit-border-radius: 8px;
           border-radius: 8px; }
+  @media only screen and (max-width: 1200px) {
+    .photo-story {
+      height: 200px; } }
+  @media only screen and (max-width: 992px) {
+    .photo-story {
+      height: 150px; } }
   .photo-story img {
     position: absolute;
     width: 100%;
@@ -2689,6 +2750,9 @@ body {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center; }
+  @media only screen and (max-width: 1200px) {
+    .story-wrap p {
+      margin: 0 0 2rem 0; } }
 
 .btn-to-blog {
   font-family: "opensans-light", sans-serif;

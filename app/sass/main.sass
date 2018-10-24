@@ -234,7 +234,7 @@ body
   @include xl
     padding-right: 1rem
   @include lg
-    padding-right: 0
+    padding-right: .6rem
   @include md
     justify-content: space-around
   .lang
@@ -362,10 +362,17 @@ body
   @include xl
     font-size: 3.6rem
     padding-top: 1rem
+  @include lg
+    font-size: 3.2rem
+  //@include md
+  //  .all-reasons
+  //    padding-left: 2rem
   @include sm
     font-size: 2.8rem
+    line-height: 1.6
   @include xs
-    font-size: 2.4rem
+    font-size: 2.2rem
+
 
 .container-smaller
   width: 1200px
@@ -492,14 +499,28 @@ body
 .top-reasons
   background-color: #fff
   max-width: 137rem
+  width: 90%
   margin: 0 auto
   padding-bottom: 10rem
+  @include sm
+    padding-bottom: 4rem
   .regular-header
     color: $main-button
+  .all-reasons
+    @include md
+      padding-left: 2rem
   .big-number
     font-family: "merriweather-black"
     font-size: 20rem
     color: $background
+    @include xl
+      font-size: 16rem
+    @include lg
+      font-size: 14rem
+    @include sm
+      font-size: 12rem
+    @include xs
+      font-size: 10rem
   .one-reason
     font-family: $items-font
     font-size: 2.4rem
@@ -507,12 +528,24 @@ body
     color: $big-text
     display: flex
     align-items: center
+    @include xl
+      font-size: 2rem
+    @include lg
+      font-size: 1.8rem
+    @include xs
+      font-size: 1.4rem
+    p
+      @include sm
+        padding-left: 1rem
+
 
 .get-ebook
   padding: 7rem 0
   background: linear-gradient(to right, rgba(#00CFEE, .5), rgba(#C9EEF6, .5)), url(../img/hearts.jpg) no-repeat
   background-size: cover
   text-align: center
+  @include lg
+    padding: 4rem 0
   p
     font-family: $button-font
     font-size: 2.8rem
@@ -520,6 +553,11 @@ body
     line-height: normal
     max-width: 74rem
     margin: 0 auto
+    @include md
+      font-size: 2rem
+    @include sm
+      font-size: 1.8rem
+      width: 90%
   .regular-header
     color: #fff
     padding: 0
@@ -542,6 +580,9 @@ body
     margin-right: 2rem
     @include lg
       font-size: 1.8rem
+    @include sm
+      margin-right: 0
+      margin-bottom: 1.6rem
     &:focus
       background-color: #fff
       color: #3b5998
@@ -559,26 +600,35 @@ body
     color: $big-text
     text-align: left
     margin: 1rem 0 0
+    @include xl
+      font-size: 2rem
   .red-btn
     margin: 7rem 0
+    @include lg
+      margin: 5rem 0
 
 
 .photo-story
-	position: relative
-	height: 264px
-	width: 100%
-	overflow: hidden
-	border-radius: 8px
-	img
-		position: absolute
-		//left: 0
-		//top: 50%
-		width: 100%
-		height: auto
+  position: relative
+  height: 264px
+  width: 100%
+  overflow: hidden
+  border-radius: 8px
+  @include xl
+    height: 200px
+  @include lg
+    height: 150px
+  img
+    position: absolute
+    width: 100%
+    height: auto
 .story-wrap
   display: flex
   flex-direction: column
   align-items: center
+  p
+    @include xl
+      margin: 0 0 2rem 0
 
 .btn-to-blog
     font-family: $default-font
