@@ -602,12 +602,24 @@ body
     margin: 1rem 0 0
     @include xl
       font-size: 2rem
+    @include sm
+      font-size: 1.8rem
+    @include xs
+      margin: 6px 0 0
   .red-btn
     margin: 7rem 0
     @include lg
       margin: 5rem 0
 
-
+.one-story
+  @include md
+    padding-bottom: 4rem
+    width: 70%
+    margin: 0 auto
+  @include sm
+    width: 90%
+  @include xs
+    width: 96%
 .photo-story
   position: relative
   height: 264px
@@ -618,10 +630,18 @@ body
     height: 200px
   @include lg
     height: 150px
+  @include md
+    height: 200px
+  @include sm
+    height: 180px
+  @include xs
+    height: 140px
   img
     position: absolute
     width: 100%
     height: auto
+    //@include md
+    //  top: -40%
 .story-wrap
   display: flex
   flex-direction: column
@@ -629,24 +649,28 @@ body
   p
     @include xl
       margin: 0 0 2rem 0
+    @include md
+      margin: 0 0 1rem 0
 
 .btn-to-blog
-    font-family: $default-font
+  font-family: $default-font
+  color: #fff
+  font-size: 2.2rem
+  background-color: $accent
+  padding: 1rem 1.8rem
+  border-radius: $radius
+  line-height: 2.4rem
+  cursor: pointer
+  box-shadow: none
+  opacity: .4
+  @include md
+    font-size: 1.8rem
+  &:focus
+    background-color: #fff
+    color: $accent
+    transition: .5s
+  a
     color: #fff
-    font-size: 2.2rem
-    background-color: $accent
-    padding: 1rem 1.8rem
-    border-radius: $radius
-    line-height: 2.4rem
-    cursor: pointer
-    box-shadow: none
-    opacity: .4
-    &:focus
-      background-color: #fff
-      color: $accent
-      transition: .5s
-    a
-      color: #fff
 
 .join-us-fb
 
@@ -658,6 +682,10 @@ body
     text-align: center
     line-height: 1.4
     padding: .2rem 0
+    @include sm
+      font-size: 2.6rem
+    @include xs
+      font-size: 1.8rem
   .fb-post
     display: flex
     align-items: center
@@ -668,29 +696,38 @@ body
   background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(#C9EEF6, 1) 45%), url(../img/girl.jpg) no-repeat 0 30%, 10% 50%
   //background-size: cover
   .contact-items
-	  color: $big-text
-	  padding: 10rem 5rem 10rem 10rem
-	  .contact-items-one
-		  padding-bottom: 7rem
-		  display: flex
-		  flex-direction: column
-	  h4
-		  font-family: $button-font
-		  font-size: 3.6rem
-		  margin: 0 0 2rem 0
-		  line-height: normal
-	  a
-		  font-size: 2.4rem
-		  color: $big-text
-	  .btn-blue
-		  margin-top: 3rem
+    color: $big-text
+    padding: 10rem 5rem 10rem 10rem
+    @include xl
+      padding: 8rem 4rem 8rem 8rem
+    .contact-items-one
+      padding-bottom: 7rem
+      display: flex
+      flex-direction: column
+      @include xl
+        padding-bottom: 6rem
+    h4
+      font-family: $button-font
+      font-size: 3.6rem
+      margin: 0 0 2rem 0
+      line-height: normal
+    a
+      font-size: 2.4rem
+      color: $big-text
+    .btn-blue
+      margin-top: 3rem
 .describe-form
-	padding: 10rem 5rem 10rem
-	h3
-		color: $big-text
-		font-size: 4.8rem
-		font-family: $headers-font
-		line-height: normal
+  padding: 10rem 5rem 10rem
+  @include xl
+    padding: 8rem 4rem 8rem
+  h3
+    color: $big-text
+    font-size: 4.8rem
+    font-family: $headers-font
+    line-height: normal
+    //margin-top: 0 0 1em 0
+    @include xl
+      font-size: 3.8rem
 .button-wrap
     display: flex
     justify-content: flex-end
@@ -710,11 +747,13 @@ body
 
 
 .describe-input
-	border: none
-	font-family: $default-font
-	font-size: 1.8rem
-	width: 100%
-	padding-left: 2.4rem
+  border: none
+  font-family: $default-font
+  font-size: 1.8rem
+  width: 100%
+  padding-left: 2.4rem
+  @include xl
+    font-size: 1.6rem
 
 .describe-form-field_text
 	height: 15.4rem

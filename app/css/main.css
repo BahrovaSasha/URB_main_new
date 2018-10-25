@@ -2712,11 +2712,31 @@ body {
     @media only screen and (max-width: 1200px) {
       .success-stories h4 {
         font-size: 2rem; } }
+    @media only screen and (max-width: 576px) {
+      .success-stories h4 {
+        font-size: 1.8rem; } }
+    @media only screen and (max-width: 350px) {
+      .success-stories h4 {
+        margin: 6px 0 0; } }
   .success-stories .red-btn {
     margin: 7rem 0; }
     @media only screen and (max-width: 992px) {
       .success-stories .red-btn {
         margin: 5rem 0; } }
+
+@media only screen and (max-width: 768px) {
+  .one-story {
+    padding-bottom: 4rem;
+    width: 70%;
+    margin: 0 auto; } }
+
+@media only screen and (max-width: 576px) {
+  .one-story {
+    width: 90%; } }
+
+@media only screen and (max-width: 350px) {
+  .one-story {
+    width: 96%; } }
 
 .photo-story {
   position: relative;
@@ -2731,6 +2751,15 @@ body {
   @media only screen and (max-width: 992px) {
     .photo-story {
       height: 150px; } }
+  @media only screen and (max-width: 768px) {
+    .photo-story {
+      height: 200px; } }
+  @media only screen and (max-width: 576px) {
+    .photo-story {
+      height: 180px; } }
+  @media only screen and (max-width: 350px) {
+    .photo-story {
+      height: 140px; } }
   .photo-story img {
     position: absolute;
     width: 100%;
@@ -2753,6 +2782,9 @@ body {
   @media only screen and (max-width: 1200px) {
     .story-wrap p {
       margin: 0 0 2rem 0; } }
+  @media only screen and (max-width: 768px) {
+    .story-wrap p {
+      margin: 0 0 1rem 0; } }
 
 .btn-to-blog {
   font-family: "opensans-light", sans-serif;
@@ -2767,6 +2799,9 @@ body {
   -webkit-box-shadow: none;
           box-shadow: none;
   opacity: .4; }
+  @media only screen and (max-width: 768px) {
+    .btn-to-blog {
+      font-size: 1.8rem; } }
   .btn-to-blog:focus {
     background-color: #fff;
     color: #00CFEE;
@@ -2787,6 +2822,12 @@ body {
   text-align: center;
   line-height: 1.4;
   padding: .2rem 0; }
+  @media only screen and (max-width: 576px) {
+    .join-us-fb .join-header {
+      font-size: 2.6rem; } }
+  @media only screen and (max-width: 350px) {
+    .join-us-fb .join-header {
+      font-size: 1.8rem; } }
 
 .join-us-fb .fb-post {
   display: -webkit-box;
@@ -2811,6 +2852,9 @@ body {
   .contacts .contact-items {
     color: #365257;
     padding: 10rem 5rem 10rem 10rem; }
+    @media only screen and (max-width: 1200px) {
+      .contacts .contact-items {
+        padding: 8rem 4rem 8rem 8rem; } }
     .contacts .contact-items .contact-items-one {
       padding-bottom: 7rem;
       display: -webkit-box;
@@ -2822,6 +2866,9 @@ body {
       -webkit-flex-direction: column;
           -ms-flex-direction: column;
               flex-direction: column; }
+      @media only screen and (max-width: 1200px) {
+        .contacts .contact-items .contact-items-one {
+          padding-bottom: 6rem; } }
     .contacts .contact-items h4 {
       font-family: "opensans-bold";
       font-size: 3.6rem;
@@ -2835,11 +2882,17 @@ body {
 
 .describe-form {
   padding: 10rem 5rem 10rem; }
+  @media only screen and (max-width: 1200px) {
+    .describe-form {
+      padding: 8rem 4rem 8rem; } }
   .describe-form h3 {
     color: #365257;
     font-size: 4.8rem;
     font-family: "merriweather-regular";
     line-height: normal; }
+    @media only screen and (max-width: 1200px) {
+      .describe-form h3 {
+        font-size: 3.8rem; } }
 
 .button-wrap {
   display: -webkit-box;
@@ -2869,6 +2922,9 @@ body {
   font-size: 1.8rem;
   width: 100%;
   padding-left: 2.4rem; }
+  @media only screen and (max-width: 1200px) {
+    .describe-input {
+      font-size: 1.6rem; } }
 
 .describe-form-field_text {
   height: 15.4rem;
