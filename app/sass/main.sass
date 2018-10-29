@@ -76,6 +76,7 @@ body
   flex-direction: column
   justify-content: flex-start
   overflow-x: hidden
+  margin-bottom: 2rem
   @include lg
     min-height: 52rem
   .header-row
@@ -93,12 +94,12 @@ body
   position: relative
   background-size: contain
   background: linear-gradient(to right, rgba(0, 0, 0, 0) 70%, rgba(#C9EEF6, 1)), url(../img/portrait.jpg) no-repeat
-  background-position: 50% 40%
+  background-position: 50% 80%
   @include xl
-    background-position: center
+    background-position: 50% 70%
   @include lg
     background: linear-gradient(to right, rgba(0, 0, 0, 0) 45%, rgba(#C9EEF6, 1)), url(../img/portrait.jpg) no-repeat
-    background-position: 60% 40%
+    background-position: 60% 60%
   @include md
     display: none
 .header-main_content
@@ -106,13 +107,13 @@ body
   padding: 3rem 3rem 0 0
   overflow-x: hidden
   @include rwd(1400)
-      padding: 1.4rem 1rem 0 0
+      padding: 1.4rem 1rem 5rem 0
   @include xl
-      padding: 1.4rem 0 0 0
+      padding: 1.4rem 0 3rem 0
   @include lg
     padding: 1.4rem 1rem 0
   @include md
-    padding: 1.4rem 2.4rem 0
+    padding: 1.4rem 2.4rem 4rem
 
   h1
     font-family: "merriweather-black"
@@ -254,6 +255,7 @@ body
     justify-content: space-around
   @include sm
     justify-content: space-between
+    padding-right: 0
   .lang
     font-size: 2.4rem
     color: $accent
@@ -399,30 +401,46 @@ body
     width: 260px
 
 .about
-	position: relative
-	background: #fff
-	//&:before
-	//	content: ''
-	//	display: block
-	//	position: absolute
-	//	border-radius: 100% 50%
-	//	width: 340px
-	//	height: 80px
-	//	background-color: #fff
-	//	right: -5px
-	//	top: 40px
-	//&:after
-	//	content: ''
-	//	display: block
-	//	position: absolute
-	//	border-radius: 100% 50%
-	//	width: 300px
-	//	height: 70px
-	//	background-color: #fff
-	//	left: 0
-	//	top: 27px
-	.regular-header
-		color: $accent
+  position: relative
+  background: #fff
+  width: 100%
+  //min-height: 1000px
+  .regular-header
+    color: $accent
+    @include xl
+      margin-top: 0
+.wave
+  position: relative
+  &:before
+    content: ''
+    position: absolute
+    top: -15%
+    left: 0
+    width: 100%
+    height: 160px
+    background: url(../img/wave1.png) no-repeat
+    background-size: contain
+    background-position: center
+    @include xl
+      top: -14%
+    @include lg
+      top: -16%
+    @include md
+      top: -9%
+      height: 100px
+    //@include sm
+    //  top: -8%
+    //  height: 100px
+  //&:after
+  //  content: ''
+  //  position: absolute
+  //  bottom: -16%
+  //  left: 0
+  //  width: 100%
+  //  height: 160px
+  //  background: url(..img/wave2.png) no-repeat
+  //  background-size: contain
+  //  background-position: center
 .video-frame
   position: relative
   //padding: 2.5rem 0
@@ -488,9 +506,33 @@ body
       padding-left: 1rem
 
 .our-team
-	background: linear-gradient(to top, #fff, #C9EEF6 )
-	.regular-header
-		color: $big-text
+  background: linear-gradient(to top, #fff, #C9EEF6 )
+  .regular-header
+    color: $big-text
+    padding-top: 10rem
+    @include md
+      padding-top: 8rem
+  .wave
+  position: relative
+  &:before
+    content: ''
+    position: absolute
+    top: -26%
+    left: 0
+    width: 100%
+    height: 160px
+    background: url(../img/wave2.png) no-repeat
+    background-size: contain
+    background-position: center
+    @include xl
+      top: -24%
+    @include lg
+      top: -30%
+    @include md
+      top: -18%
+      height: 100px
+    @include sm
+      top: -30%
 
 //.teammate
 //	text-align: center
@@ -648,6 +690,10 @@ body
     position: absolute
     width: 100%
     height: auto
+    top: 50%
+    left: 50%
+
+    transform: translate(-50%, -50%)
     //@include md
     //  top: -40%
 .story-wrap
