@@ -2232,6 +2232,27 @@ body {
       width: 100%;
       height: auto; }
 
+.btn-blue {
+  font-family: "opensans-bold";
+  color: #fff;
+  font-size: 2.4rem;
+  background-color: #00CFEE;
+  padding: 1rem 1.8rem;
+  -webkit-border-radius: 22px;
+          border-radius: 22px;
+  line-height: 2.4rem;
+  cursor: pointer;
+  border: none; }
+  @media only screen and (max-width: 992px) {
+    .btn-blue {
+      font-size: 1.8rem; } }
+  .btn-blue:focus {
+    background-color: #fff;
+    color: #00CFEE;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s; }
+
 .right-info {
   width: 65%;
   display: -webkit-box;
@@ -2258,6 +2279,12 @@ body {
       -webkit-justify-content: space-around;
           -ms-flex-pack: distribute;
               justify-content: space-around; } }
+  @media only screen and (max-width: 576px) {
+    .right-info {
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between; } }
   .right-info .lang {
     font-size: 2.4rem;
     color: #00CFEE;
@@ -2340,31 +2367,17 @@ body {
     display: none; }
     @media only screen and (max-width: 576px) {
       .right-info .callback-small {
-        display: block; } }
+        display: block;
+        line-height: 0;
+        padding: 1rem; }
+        .right-info .callback-small img {
+          width: 24px;
+          height: 24px;
+          -webkit-filter: invert(1);
+                  filter: invert(1); } }
   @media only screen and (max-width: 576px) {
     .right-info .callback-big {
       display: none; } }
-
-.btn-blue {
-  font-family: "opensans-bold";
-  color: #fff;
-  font-size: 2.4rem;
-  background-color: #00CFEE;
-  padding: 1rem 1.8rem;
-  -webkit-border-radius: 22px;
-          border-radius: 22px;
-  line-height: 2.4rem;
-  cursor: pointer;
-  border: none; }
-  @media only screen and (max-width: 992px) {
-    .btn-blue {
-      font-size: 1.8rem; } }
-  .btn-blue:focus {
-    background-color: #fff;
-    color: #00CFEE;
-    -webkit-transition: .5s;
-    -o-transition: .5s;
-    transition: .5s; }
 
 .red-btn {
   font-family: "opensans-bold";
@@ -2844,19 +2857,65 @@ body {
           justify-content: center;
   padding: 2rem 0; }
 
+.button-wrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-top: 3rem; }
+
 .contacts {
-  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), color-stop(45%, #c9eef6)), url(../img/girl.jpg) no-repeat 0 30%, 10% 50%;
-  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), #c9eef6 45%), url(../img/girl.jpg) no-repeat 0 30%, 10% 50%;
-  background: -o-linear-gradient(left, rgba(0, 0, 0, 0), #c9eef6 45%), url(../img/girl.jpg) no-repeat 0 30%, 10% 50%;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0), #c9eef6 45%), url(../img/girl.jpg) no-repeat 0 30%, 10% 50%; }
+  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), color-stop(45%, #c9eef6)), url(../img/girl.jpg) no-repeat;
+  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), #c9eef6 45%), url(../img/girl.jpg) no-repeat;
+  background: -o-linear-gradient(left, rgba(0, 0, 0, 0), #c9eef6 45%), url(../img/girl.jpg) no-repeat;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), #c9eef6 45%), url(../img/girl.jpg) no-repeat;
+  background-position: 0 30%, -20% 50%; }
+  @media only screen and (max-width: 1200px) {
+    .contacts {
+      background-position: 0% 40%, -50% 40%; } }
+  @media only screen and (max-width: 992px) {
+    .contacts {
+      background-position: 0% 40%, 130% 40%; } }
+  @media only screen and (max-width: 768px) {
+    .contacts {
+      background-position: 0% 40%, 100% 40%; } }
+  @media only screen and (max-width: 576px) {
+    .contacts {
+      background-position: 0% 40%, 60% 40%; } }
   .contacts .contact-items {
     color: #365257;
-    padding: 10rem 5rem 10rem 10rem; }
+    padding: 10rem 5rem 10rem 10rem;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
     @media only screen and (max-width: 1200px) {
       .contacts .contact-items {
         padding: 8rem 4rem 8rem 8rem; } }
+    @media only screen and (max-width: 992px) {
+      .contacts .contact-items {
+        padding: 8rem 0; } }
+    @media only screen and (max-width: 768px) {
+      .contacts .contact-items {
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
+        padding: 5rem 0 2rem; } }
     .contacts .contact-items .contact-items-one {
-      padding-bottom: 7rem;
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -2866,51 +2925,77 @@ body {
       -webkit-flex-direction: column;
           -ms-flex-direction: column;
               flex-direction: column; }
-      @media only screen and (max-width: 1200px) {
+      @media only screen and (max-width: 768px) {
         .contacts .contact-items .contact-items-one {
-          padding-bottom: 6rem; } }
+          text-align: center;
+          margin: 0 0 2rem 0; } }
+    .contacts .contact-items .button-wrap {
+      -webkit-box-pack: start;
+      -webkit-justify-content: flex-start;
+          -ms-flex-pack: start;
+              justify-content: flex-start; }
     .contacts .contact-items h4 {
       font-family: "opensans-bold";
       font-size: 3.6rem;
       margin: 0 0 2rem 0;
       line-height: normal; }
+      @media only screen and (max-width: 768px) {
+        .contacts .contact-items h4 {
+          margin: 0;
+          font-size: 3rem; } }
+      @media only screen and (max-width: 576px) {
+        .contacts .contact-items h4 {
+          font-size: 2.8rem; } }
     .contacts .contact-items a {
       font-size: 2.4rem;
       color: #365257; }
-    .contacts .contact-items .btn-blue {
-      margin-top: 3rem; }
+      @media only screen and (max-width: 768px) {
+        .contacts .contact-items a {
+          font-size: 2rem; } }
 
 .describe-form {
   padding: 10rem 5rem 10rem; }
   @media only screen and (max-width: 1200px) {
     .describe-form {
       padding: 8rem 4rem 8rem; } }
+  @media only screen and (max-width: 992px) {
+    .describe-form {
+      padding: 8rem 0; } }
+  @media only screen and (max-width: 768px) {
+    .describe-form {
+      padding: 5rem 0; } }
   .describe-form h3 {
     color: #365257;
     font-size: 4.8rem;
     font-family: "merriweather-regular";
-    line-height: normal; }
+    line-height: normal;
+    margin: 0 0 1em 0; }
     @media only screen and (max-width: 1200px) {
       .describe-form h3 {
         font-size: 3.8rem; } }
-
-.button-wrap {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-      -ms-flex-pack: end;
-          justify-content: flex-end; }
+    @media only screen and (max-width: 768px) {
+      .describe-form h3 {
+        text-align: center;
+        font-size: 3.2rem; } }
+    @media only screen and (max-width: 576px) {
+      .describe-form h3 {
+        font-size: 2.4rem; } }
 
 .error-message {
   color: #FF4E4E;
-  padding: 0 0 0 2.4rem; }
+  padding: 0 0 0 2.4rem;
+  line-height: normal;
+  font-size: 1.4rem; }
+  @media only screen and (max-width: 350px) {
+    .error-message {
+      padding: 0 0 0 2rem; } }
 
 .describe-form-field {
-  padding-bottom: 1rem;
-  height: 8.6rem; }
+  height: 8.4rem; }
+  @media only screen and (max-width: 350px) {
+    .describe-form-field {
+      width: 98%;
+      margin: 0 auto; } }
   .describe-form-field input {
     height: 5rem;
     -webkit-border-radius: 5rem;
@@ -2925,21 +3010,33 @@ body {
   @media only screen and (max-width: 1200px) {
     .describe-input {
       font-size: 1.6rem; } }
+  @media only screen and (max-width: 350px) {
+    .describe-input {
+      padding-left: 2rem; } }
 
 .describe-form-field_text {
-  height: 15.4rem;
-  margin-bottom: 5rem; }
+  height: 15.4rem; }
+  @media only screen and (max-width: 350px) {
+    .describe-form-field_text {
+      width: 98%;
+      margin: 0 auto; } }
   .describe-form-field_text textarea {
     height: 15.4rem;
     -webkit-border-radius: 2rem;
             border-radius: 2rem;
-    padding-top: 1rem; }
+    padding-top: 1rem;
+    resize: none; }
 
 footer {
   margin: 0 auto; }
   footer .row {
     padding: 3rem 0;
     margin: 0 2rem; }
+  @media only screen and (max-width: 768px) {
+    footer .footer-item.btn-to-blog_wrapper {
+      display: none; }
+      footer .footer-item.btn-to-blog_wrapper .btn-to-blog {
+        display: none; } }
   footer .footer-item {
     display: -webkit-box;
     display: -webkit-flex;
@@ -2958,16 +3055,40 @@ footer {
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center; }
+    footer .footer-item img {
+      width: 100%; }
+      @media only screen and (max-width: 768px) {
+        footer .footer-item img {
+          width: 30%;
+          margin-bottom: 1rem; } }
   footer .small-contacts {
     margin: 0;
     font-family: "opensans-lightitalic";
-    font-size: 1.8rem;
-    line-height: normal; }
+    font-size: 1.6rem;
+    line-height: normal;
+    white-space: nowrap; }
+    @media (max-width: 1300pxpx) {
+      footer .small-contacts {
+        font-size: 1.6rem;
+        text-align: center; } }
+    @media only screen and (max-width: 1200px) {
+      footer .small-contacts {
+        font-size: 1.4rem; } }
+    @media only screen and (max-width: 992px) {
+      footer .small-contacts {
+        font-size: 1.2rem; } }
+    @media only screen and (max-width: 768px) {
+      footer .small-contacts {
+        text-align: center; } }
+    @media only screen and (max-width: 576px) {
+      footer .small-contacts p {
+        margin: .8rem 0; } }
   footer .rights {
     text-align: center;
     background-color: #365257;
     color: #fff;
-    padding: 1.2rem 0; }
+    padding: 1rem 0;
+    font-size: 1.2rem; }
     footer .rights p {
       margin: 0;
       line-height: normal; }

@@ -224,7 +224,22 @@ body
     img
       width: 100%
       height: auto
-
+.btn-blue
+  font-family: $button-font
+  color: #fff
+  font-size: 2.4rem
+  background-color: $accent
+  padding: 1rem 1.8rem
+  border-radius: $radius
+  line-height: 2.4rem
+  cursor: pointer
+  border: none
+  @include lg
+    font-size: 1.8rem
+  &:focus
+    background-color: #fff
+    color: $accent
+    transition: .5s
 .right-info
   width: 65%
   display: flex
@@ -237,6 +252,8 @@ body
     padding-right: .6rem
   @include md
     justify-content: space-around
+  @include sm
+    justify-content: space-between
   .lang
     font-size: 2.4rem
     color: $accent
@@ -285,25 +302,16 @@ body
     display: none
     @include sm
       display: block
+      line-height: 0
+      padding: 1rem
+      img
+        width: 24px
+        height: 24px
+        filter: invert(1)
   .callback-big
     @include sm
       display: none
-.btn-blue
-  font-family: $button-font
-  color: #fff
-  font-size: 2.4rem
-  background-color: $accent
-  padding: 1rem 1.8rem
-  border-radius: $radius
-  line-height: 2.4rem
-  cursor: pointer
-  border: none
-  @include lg
-    font-size: 1.8rem
-  &:focus
-    background-color: #fff
-    color: $accent
-    transition: .5s
+
 
 
 .red-btn
@@ -691,46 +699,83 @@ body
     align-items: center
     justify-content: center
     padding: 2rem 0
-
+.button-wrap
+  display: flex
+  justify-content: flex-end
+  margin-top: 3rem
 .contacts
-  background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(#C9EEF6, 1) 45%), url(../img/girl.jpg) no-repeat 0 30%, 10% 50%
-  //background-size: cover
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(#C9EEF6, 1) 45%), url(../img/girl.jpg) no-repeat
+  background-position: 0 30%, -20% 50%
+  @include xl
+    background-position: 0% 40%, -50% 40%
+  @include lg
+    background-position: 0% 40%, 130% 40%
+  @include md
+    background-position: 0% 40%, 100% 40%
+  @include sm
+    background-position: 0% 40%, 60% 40%
   .contact-items
     color: $big-text
     padding: 10rem 5rem 10rem 10rem
+    display: flex
+    flex-direction: column
+    justify-content: space-between
     @include xl
       padding: 8rem 4rem 8rem 8rem
+    @include lg
+      padding: 8rem 0
+    @include md
+      align-items: center
+      padding: 5rem 0 2rem
     .contact-items-one
-      padding-bottom: 7rem
+      //padding-bottom: 6.2rem
       display: flex
       flex-direction: column
-      @include xl
-        padding-bottom: 6rem
+      //@include xl
+      //  padding-bottom: 6rem
+      @include md
+        text-align: center
+        margin: 0 0 2rem 0
+    .button-wrap
+      justify-content: flex-start
     h4
       font-family: $button-font
       font-size: 3.6rem
       margin: 0 0 2rem 0
       line-height: normal
+      @include md
+        margin: 0
+        font-size: 3rem
+      @include sm
+        font-size: 2.8rem
     a
       font-size: 2.4rem
       color: $big-text
-    .btn-blue
-      margin-top: 3rem
+      @include md
+        font-size: 2rem
+
 .describe-form
   padding: 10rem 5rem 10rem
   @include xl
     padding: 8rem 4rem 8rem
+  @include lg
+    padding: 8rem 0
+  @include md
+    padding: 5rem 0
   h3
     color: $big-text
     font-size: 4.8rem
     font-family: $headers-font
     line-height: normal
-    //margin-top: 0 0 1em 0
+    margin: 0 0 1em 0
     @include xl
       font-size: 3.8rem
-.button-wrap
-    display: flex
-    justify-content: flex-end
+    @include md
+      text-align: center
+      font-size: 3.2rem
+    @include sm
+      font-size: 2.4rem
+
 //form
 	//	display: flex
 	//	flex-direction: column
@@ -738,12 +783,24 @@ body
 .error-message
     color: $main-button
     padding: 0 0 0 2.4rem
+    line-height: normal
+    font-size: 1.4rem
+    @include xs
+      padding: 0 0 0 2rem
 .describe-form-field
-	padding-bottom: 1rem
-	height: 8.6rem
-	input
-		height: 5rem
-		border-radius: 5rem
+  //margin-bottom: .6rem
+  height: 8.4rem
+  //@include lg
+  //  height: 6.8rem
+  @include xs
+    width: 98%
+    margin: 0 auto
+  input
+    height: 5rem
+    border-radius: 5rem
+    //@include lg
+    //  height: 4rem
+    //  border-radius: 4rem
 
 
 .describe-input
@@ -754,35 +811,73 @@ body
   padding-left: 2.4rem
   @include xl
     font-size: 1.6rem
+  @include xs
+    padding-left: 2rem
 
 .describe-form-field_text
 	height: 15.4rem
-	margin-bottom: 5rem
+	//margin-bottom: 5rem
+	@include xs
+      width: 98%
+      margin: 0 auto
 	textarea
       height: 15.4rem
       border-radius: 2rem
       padding-top: 1rem
+      resize: none
 
 footer
   margin: 0 auto
   .row
     padding: 3rem 0
     margin: 0 2rem
+  .footer-item.btn-to-blog_wrapper
+    @include md
+      display: none
+      .btn-to-blog
+        display: none
   .footer-item
     display: flex
     align-items: center
     flex-direction: column
     justify-content: center
+    //position: relative
+    img
+      //position: absolute
+      width: 100%
+      //height: auto
+      @include md
+        width: 30%
+        margin-bottom: 1rem
+
+
+
+
   .small-contacts
     margin: 0
     font-family: $description-font
-    font-size: 1.8rem
+    font-size: 1.6rem
     line-height: normal
+    white-space: nowrap
+    //height: 3.6rem
+    @include rwd(1300px)
+      font-size: 1.6rem
+      text-align: center
+    @include xl
+      font-size: 1.4rem
+    @include lg
+      font-size: 1.2rem
+    @include md
+      text-align: center
+    @include sm
+      p
+        margin: .8rem 0
   .rights
     text-align: center
     background-color: $big-text
     color: #fff
-    padding: 1.2rem 0
+    padding: 1rem 0
+    font-size: 1.2rem
     p
       margin: 0
       line-height: normal
